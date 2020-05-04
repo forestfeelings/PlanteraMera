@@ -1,14 +1,21 @@
 ﻿@{
-    ViewBag.Title = "Hemsidan";
+    ViewBag.Title = "Startsida";
 }
-<div class="plant-info">
-    <img src="~/images/corn.jpg" />
-    <h3>Majsfrön</h3>
-    <ul class="plant-props">
-        <li>Pris: 30 SEK</li>
-        <li>Sort: Sockermajs</li>
-        <li>Namn: Double Standard</li>
-        <li>En tidig, öppet pollinerad, tvåfärgad sockermajs.</li>
-    </ul>
-    <button id="buyButton" class="btn btn-success">Köp</button>
-</div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="plant-info">
+                <img src="~/images/corn.jpg" />
+                <h3>Majsfrön</h3>
+                <ul class="plant-props">
+                    <li>Pris: 30 SEK</li>
+                    <li>Sort: Sockermajs</li>
+                    <li>Namn: Double Standard</li>
+                    <li>En tidig, öppet pollinerad, tvåfärgad sockermajs.</li>
+                </ul>
+                <button id="buyButton" class="btn btn-success">Köp</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <p>Detta är en sida där du kan köpa frön!</p>
+        </div>
+    </div>
