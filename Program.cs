@@ -18,9 +18,18 @@ namespace PlanteraMera
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(SetupConfiguration)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        private static void SetupConfiguration(HostBuilderContext ctx, IConfigurationBuilder builder)
+        {
+            // Removing the default configuration options
+            builder.Sources.Clear();
+
+
+        }
     }
 }
