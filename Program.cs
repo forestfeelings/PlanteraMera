@@ -29,7 +29,8 @@ namespace PlanteraMera
             // Removing the default configuration options
             builder.Sources.Clear();
 
-
+            builder.AddJsonFile("config.json", false, true)
+                   .AddEnvironmentVariables();
         }
     }
 }

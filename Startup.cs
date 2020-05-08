@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PlanteraMera.Data;
 using PlanteraMera.Data.Entities;
 using PlanteraMera.Services;
 
@@ -26,10 +23,23 @@ namespace PlanteraMera
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentity<StoreUser, IdentityRole>(cfg =>
+            {
+                cfg.User.RequireUniqueEmail = true;
+            })
+                .AddEntityFrameworkStores<PlanteraContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddAuthentication()
+                .AddCookie()
+                .AddJwtBearer();
+            
             services.AddDbContext<PlanteraContext>(cfg =>
             {
                 cfg.UseSqlServer(_config.GetConnectionString("PlanteraConnectionString"));
             });
+
+            services.AddScoped<ISeedRepository, MockSeedRepository>();
 
             services.AddTransient<IMailService, NullMailService>();
 
@@ -53,7 +63,11 @@ namespace PlanteraMera
             app.UseStaticFiles();
             app.UseNodeModules();
 
+            app.UseAuthentication();
+
             app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(cfg =>
             {

@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using PlanteraMera.Data;
+using PlanteraMera.Data.Entities;
 using PlanteraMera.Services;
 using PlanteraMera.ViewModels;
 using System;
@@ -12,14 +16,19 @@ namespace PlanteraMera.Controllers
     public class AppController : Controller
     {
         private readonly IMailService _mailService;
+        private readonly ISeedRepository _repository;
+        private readonly UserManager<StoreUser> _userManager;
 
-        public AppController(IMailService mailService)
+        public AppController(IMailService mailService, ISeedRepository repository, UserManager<StoreUser> userManager)
         {
             _mailService = mailService;
+            _repository = repository;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
         {
+            //var results = _repository.GetAll();
             return View();
         }
 
@@ -48,6 +57,14 @@ namespace PlanteraMera.Controllers
             ViewBag.Title = "Om oss";
 
             return View();
+        }
+
+        [Authorize]
+        public IActionResult Shop()
+        {
+            var results = _repository.GetAll();
+
+            return View(results);
         }
     }
 }

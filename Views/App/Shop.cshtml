@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Seed>
+<h1>Webbshop</h1>
+<p>Antal: @Model.Count()</p>
+<div class="row">
+    @foreach (var s in Model)
+    {
+        <div class="col-md-4">
+            <div class="border bg-light rounded p-1">
+                <img src="~/images/@(s.Type).jpg" class="img-fluid" alt="@s.Name"/>
+                <h3>@s.Name</h3>
+                <ul>
+                    <li>Pris: @s.Price SEK</li>
+                    <li>Sort: @s.Type</li>
+                    <li>Latinskt namn: @s.LatinName</li>
+                    <li>Botanisk familj: @s.BotanicalFamily</li>
+                    <li>Utvecklingstid, dagar: @s.DaysToDevelop</li>
+                    <li>Årighet: @s.Annuality</li>
+                    <li>Höjd: @s.HeightCm cm</li>
+                    <li>@s.Description</li>
+                </ul>
+                <button id="buyButton" class="btn btn-success">Köp</button>
+            </div>
+        </div>
+    }
+</div>
