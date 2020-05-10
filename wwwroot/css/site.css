@@ -1,0 +1,104 @@
+﻿body {
+    padding-top: 70px;
+    background-color: #AFA939;
+    font-family: roboto-regular;
+}
+
+h1 {
+    font-family: yesevaone-regular;
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/roboto-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'yesevaone-regular';
+    src: url('../fonts/yesevaone-regular.ttf') format('truetype');
+}
+
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.addToCart {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.navbar {
+    background-color: none;
+}
+
+.navbar-inverse {
+    background-color: #2B580C;
+    border-color: #2B580C;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: #FFFF7F;
+    font-size: 1.2em;
+}
+
+.navbar .nav > li > a {
+    font-size: 1.2em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #FFFF7F;
+}
+
+.carousel .item {
+    height: 400px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #119DA4 !important;
+    border-color: #11a49f !important;
+}
+
+.btn {
+    background-color: #119DA4 !important;
+    border-color: #11a49f !important;
+}

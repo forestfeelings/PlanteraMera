@@ -73,7 +73,7 @@ namespace PlanteraMera
             {
                 cfg.MapControllerRoute("Fallback",
                     "{controller}/{action}/{id?}",
-                    new { controller = "App", action = "Index" });
+                    new { controller = "Home", action = "Index" });
             });
         }
     }

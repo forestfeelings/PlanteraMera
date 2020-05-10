@@ -18,5 +18,6 @@ namespace PlanteraMera.Data.Entities
         public string Description { get; set; }
         public int HeightCm { get; set; }
         public decimal Price { get; set; }
+        public bool IsBeginnerSeed { get; set; }
     }
 }

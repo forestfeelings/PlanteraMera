@@ -28,7 +28,6 @@ namespace PlanteraMera.Controllers
 
         public IActionResult Index()
         {
-            //var results = _repository.GetAll();
             return View();
         }
 
@@ -59,7 +58,6 @@ namespace PlanteraMera.Controllers
             return View();
         }
 
-        [Authorize]
         public IActionResult Shop()
         {
             var results = _repository.GetAll();

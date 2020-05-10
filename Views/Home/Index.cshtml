@@ -1,0 +1,13 @@
+﻿@model HomeViewModel
+
+<partial name="_Carousel" />
+
+<h2>Fröer för nybörjare</h2>
+<h4>Nybörjarfröer för trädgårdssugna!</h4>
+
+<div class="row">
+    @foreach (var seed in Model.BeginnerSeeds)
+    {
+        <partial name="_SeedCard" model="seed" />
+    }
+</div>

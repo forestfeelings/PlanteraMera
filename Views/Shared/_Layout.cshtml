@@ -8,18 +8,18 @@
 </head>
 <body>
     <header class="container-fluid">
-        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-            <h1 class="navbar-brand"><i class="fas fa-seedling"></i> Välkommen till Plantera Mera</h1>
+        <nav class="navbar navbar-dark bg-garden navbar-expand-md">
+            <h1 class="navbar-brand"><i class="fas fa-seedling"></i> Plantera Mera <i class="fas fa-seedling"></i></h1>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#theMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="theMenu" class="navbar-collapse collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="App" asp-action="Index">Startsida</a>
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Startsida</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="App" asp-action="Shop">Köp frön</a>
+                        <a class="nav-link" asp-controller="Seed" asp-action="List">Köp frön</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="App" asp-action="Contact">Kontakta oss</a>

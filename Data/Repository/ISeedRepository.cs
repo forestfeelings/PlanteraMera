@@ -9,10 +9,10 @@ namespace PlanteraMera.Data
 {
     public interface ISeedRepository
     {
-        //IEnumerable<Seed> AllSeeds { get; }
+        IEnumerable<Seed> BeginnerSeeds { get; }
 
         IEnumerable<Seed> GetAll();
 
-        Seed GetSeedById(Guid seedId);
+        Seed GetSeedById(Guid id);
     }
 }

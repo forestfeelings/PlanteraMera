@@ -16,7 +16,7 @@ namespace PlanteraMera.Data
         }
 
         public DbSet<Seed> Seeds { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

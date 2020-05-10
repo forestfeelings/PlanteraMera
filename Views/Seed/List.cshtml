@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Seed>
+<h1>Fröer</h1>
+<p>Antal: @Model.Count()</p>
+<div class="row">
+    @foreach (var seed in Model)
+    {
+        <partial name="_SeedCard" model="seed" />
+    }
+</div>

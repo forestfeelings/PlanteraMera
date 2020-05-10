@@ -1,4 +1,73 @@
-﻿.container-fluid {
+﻿@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/roboto-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'yesevaone-regular';
+    src: url('../fonts/yesevaone-regular.ttf') format('truetype');
+}
+
+body {
+    font-family: roboto-regular;
+    background-color: #FDF1DB;
+}
+
+h1, h2, h3 {
+    font-family: yesevaone-regular;
+}
+
+.bg-garden {
+    background-color: #84253E;
+}
+
+.navbar-brand {
+    font-family: yesevaone-regular;
+}
+
+.container-fluid {
     padding-left: 0;
     padding-right: 0;
+}
+
+.img-fluid {
+    height: 180px;
+}
+
+#buyButton {
+    margin-bottom: 5px;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.carousel-item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+    .caption h4 {
+        white-space: nowrap;
+    }
+
+div.c-wrapper {
+    width: 50%; /* for example */
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%; /* use this, or not */
+    margin: auto;
+}
+
+.carousel img {
+    margin: auto;
 }

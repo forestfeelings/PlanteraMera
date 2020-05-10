@@ -1,7 +1,4 @@
 {
-	"Colors": {
-		"Favorite": "blue"
-	},
 	"ConnectionStrings": {
 		"PlanteraConnectionString": "server=(localdb)\\MSSQLLocalDB;Database=PlanteraMeraDb;Integrated Security=true;MultipleActiveResultSets=true;"
 	},

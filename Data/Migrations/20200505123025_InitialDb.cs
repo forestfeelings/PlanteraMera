@@ -33,8 +33,7 @@ namespace PlanteraMera.Migrations
                     Type = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     MyProperty = table.Column<int>(nullable: false),
-                    Price = table.Column<decimal>(nullable: false),
-                    ImageUrl = table.Column<string>(nullable: true)
+                    Price = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {
